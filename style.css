@@ -1,0 +1,39 @@
+/* Styles go here */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.inner_Table td {
+    padding: 10px;
+}
+
+.outer_Table {
+    width: 50%;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.inner_Table {
+    position: relative;
+    left: 15px;
+    width: 35em;
+    margin: 20px;
+}
+
+#search_box {
+    border-style: none;
+    background-color: #D3D3D3;
+    width: 630px;
+    height: 25px;
+    font-size: 20px;
+}
+
+.fontFormat {
+    font-style: italic;
+}
+
+@media

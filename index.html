@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="display_parks">
+
+<head>
+    <title>CRMantra Exercise</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.17/angular.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="parks.json">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div ng-controller="controllerv_parks as park_details">
+        <input id="search_box" ng-model="park_details.search" type="text" name="search_parks" placeholder="Search">
+        <div ng-repeat="value in park_details.obj | filter: park_details.search">
+            <table class="outer_Table">
+                <td ng-click="park_details.showDetails($index)">
+                    {{value.name}}
+                    <table class="inner_Table" ng-if="value.shouldShow" ng-style="{backgroundColor: park_details.getBackgroundColor($index)}">
+                        <tr>
+                            <td>{{park_details.object_keys[0]}}</td>
+                            <td class="fontFormat">{{value.details.Area}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{park_details.object_keys[1]}}</td>
+                            <td class="fontFormat">{{value.details.Location}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{park_details.object_keys[2]}}</td>
+                            <td class="fontFormat">{{value.details["Year of Formation"]}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

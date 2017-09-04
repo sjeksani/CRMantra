@@ -1,0 +1,23 @@
+{
+    "name": "CRMantra",
+    "version": "1.0.0",
+    "description": "Your task is to implement the following UI with JavaScript, CSS and HTML (AngularJS or JQuery welcome as well).",
+    "main": "script.js",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "karma": "^1.7.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-jasmine": "^1.1.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
